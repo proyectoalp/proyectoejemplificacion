@@ -1,0 +1,151 @@
+body {
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial;
+}
+
+.img-1 {height: 7%; 
+	width: 20%;
+	position: relative;
+	top:px;
+	margin-left: 40px;
+} 
+.linea{
+	position: relative; 
+	
+}
+.paso-1{
+	color: #434343;
+	font-size: 15px;
+	position: relative;
+	bottom: 20px;
+}
+.confi-1{
+	font-size: 25px;
+	position: relative; 
+	bottom: 30px;
+}
+.america{
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 120px;
+	left: px;
+}
+.visa{
+	position: relative;
+	top: 120px;
+	left: px;
+	width: 40px;
+	height: 40px;
+}
+.master{
+	position: relative;
+	width: 40px;
+	height: 40px;
+	top: 120px;
+	left: px;
+}
+.form{
+	box-sizing: border-box;
+	margin-right: 20px;
+	
+}
+input{
+	margin-top: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+	top: 30px;
+	border-radius: 4px;
+	border:1px solid #929292;
+	padding: 23px;
+	font-size: 13px;
+	outline-color: #4184f3;
+
+}
+input:focus {
+	border-color: blue;
+}
+.boton{
+	position: relative;
+	top: 40px;
+	padding: 15px;
+	width: 100%;
+	font-size: 15px;
+	background: #e50914;
+	border:none;
+	border-radius: 4px;
+	color:white;
+
+}
+.alacer{
+	position: relative;
+	top: 30px;
+	font-size: 13px;
+	color: #6A6868;
+}
+.porunmes{
+	position: relative;
+	top: 30px;
+	background: #D6D6D6;
+	padding: 20px;
+	border-radius: 4px;
+}
+.plan-1{
+	color: #7C7C7C;
+	position: relative;
+	top: 3px;
+}
+.content{
+	
+	object-position: center;
+	width: 500px;
+	height: 900px;
+	
+	box-sizing: border-box;
+	position: relative;
+	top:px; 
+	left:30%;
+	padding-left: 20px;
+		
+}
+@media all and (max-width: 500px) {
+	.content {
+		width: 90%; 
+		position: relative;
+		left: -10px;
+		top: px;
+		
+		margin-left: 30px;
+		
+
+	}
+	
+	.lenea{
+
+		position: relative;
+		
+	}
+	.visa{
+		display: inline;
+		position: relative;
+		left:px;
+		top: px;
+	}
+	.master{
+		position: relative;
+		left: px;
+		top: px;
+	}
+	.america{
+		position: relative;
+		top: px;
+		left: px;
+	}
+}
+@media all and (max-height: 815px){
+	
+}
